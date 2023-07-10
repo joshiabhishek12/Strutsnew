@@ -25,6 +25,16 @@ public class DiscountAction extends ActionSupport {
         return SUCCESS;
     }
 
+    public String search() {
+        // Add your logic here to search for products based on the 'query'
+        // Retrieve the relevant products and pass them to the JSP page for display
+        // Example code:
+        // List<Product> productList = productService.searchProducts(query);
+        // setProducts(productList);
+
+        return SUCCESS;
+    }
+
     public String submitOrder() {
         
         if (userName == null || userName.trim().isEmpty()) {

@@ -107,6 +107,13 @@
 <body>
     <div class="container">
         <h1>Heavy Discount</h1>
+        
+        <div class="search-container">
+            <form action="<s:url action='searchProducts'/>" method="get">
+                <input type="text" name="query" placeholder="Search products...">
+                <input type="submit" value="Search">
+            </form>
+        </div>
 
         <div class="product-box">
             <div class="product-image-container">

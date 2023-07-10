@@ -1,5 +1,7 @@
 package com.javatpoint;
-
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -19,6 +21,7 @@ public class ProductAction extends ActionSupport {
     private float price;
     private int autoId;
     private List<String> catalogList;
+    
 
     // Getters and Setters
 
@@ -153,7 +156,6 @@ public class ProductAction extends ActionSupport {
             }
         }
     }
-//below method is to store the values to the database
     @Override
     public String execute() {
         Connection connection = null;
@@ -225,7 +227,6 @@ public class ProductAction extends ActionSupport {
     }
 
     public String deleteProduct() {
-        // Show confirmation dialog/prompt to the user
         boolean confirmDelete = showConfirmationDialog();
         if (!confirmDelete) {
             addActionMessage("Product deletion canceled");
